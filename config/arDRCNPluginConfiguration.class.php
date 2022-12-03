@@ -17,7 +17,13 @@
  * along with Access to Memory (AtoM).  If not, see <http://www.gnu.org/licenses/>.
  */
 
-class arDominionPluginConfiguration extends sfPluginConfiguration
+/*
+ * @ 2022.12.03
+ * Authors: Ricardo Pinho (ricardo.pinho@gisvm.com)
+ *
+ */
+
+class arDRCNPluginConfiguration extends sfPluginConfiguration
 {
   public static
     $summary = 'Theme plugin made from scratch with some JavaScript magic. Cross-browser compatibility tested. Based in Twitter Bootstrap 2.0, 940px two-column layout, slightly responsive.',
@@ -32,11 +38,11 @@ class arDominionPluginConfiguration extends sfPluginConfiguration
     if ($context->getConfiguration()->isDebug())
     {
       $context->response->addJavaScript('/vendor/less.js', 'last');
-      $context->response->addStylesheet('/plugins/arDominionPlugin/css/main.less', 'last', array('rel' => 'stylesheet/less', 'type' => 'text/css', 'media' => 'all'));
+      $context->response->addStylesheet('/plugins/arDRCNPlugin/css/main.less', 'last', array('rel' => 'stylesheet/less', 'type' => 'text/css', 'media' => 'all'));
     }
     else
     {
-      $context->response->addStylesheet('/plugins/arDominionPlugin/css/main.css', 'last', array('media' => 'all'));
+      $context->response->addStylesheet('/plugins/arDRCNPlugin/css/main.css', 'last', array('media' => 'all'));
     }
   }
 
