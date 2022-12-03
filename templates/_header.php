@@ -16,6 +16,13 @@
  * along with Access to Memory (AtoM).  If not, see <http://www.gnu.org/licenses/>.
  */
 ?>
+<?php
+/*
+ * @ 2022.12.03
+ * Authors: Ricardo Pinho (ricardo.pinho@gisvm.com)
+ *
+ */
+?>
 
 <?php echo get_component('default', 'updateCheck') ?>
 
@@ -28,18 +35,27 @@
 <?php endif; ?>
 
 <header id="top-bar">
+ <div id="logo-bar">
+  <div class="container">
+   <?php if (sfConfig::get('app_toggleLogo')): ?>
+    <?php $pluginpath = substr(__DIR__, strpos(__DIR__, "/plugins"));
+          $pluginpath = rtrim($pluginpath, "templates"); ?>
+    <?php echo link_to(image_tag($pluginpath.'images/logo.png', array('alt' => 'Arquiv@')), '@homepage', array('id' => 'logo', 'rel' => 'home')) ?>
+    <?php echo link_to(image_tag($pluginpath.'images/logo-republica-drcn.png', array('alt' => 'Arquiv@')), '@homepage', array('id' => 'republica_drcn', 'rel' => 'home')) ?>
+   <?php endif; ?>
 
-  <?php if (sfConfig::get('app_toggleLogo')): ?>
-    <?php echo link_to(image_tag('logo', array('alt' => 'AtoM')), '@homepage', array('id' => 'logo', 'rel' => 'home')) ?>
-  <?php endif; ?>
-
-  <?php if (sfConfig::get('app_toggleTitle')): ?>
+   <?php if (sfConfig::get('app_toggleTitle')): ?>
     <h1 id="site-name">
       <?php echo link_to('<span>'.esc_specialchars(sfConfig::get('app_siteTitle')).'</span>', '@homepage', array('rel' => 'home', 'title' => __('Home'))) ?>
     </h1>
-  <?php endif; ?>
-
-  <nav>
+   <?php endif; ?>
+  </div>
+ </div>
+<div id="menu-bar">
+ <div class="container">
+  <div id="search-bar">
+   <div style="float: right;">
+    <nav>
 
     <?php echo get_component('menu', 'userMenu') ?>
 
@@ -53,18 +69,19 @@
 
     <?php echo get_component('menu', 'mainMenu', array('sf_cache_key' => $sf_user->getCulture().$sf_user->getUserID())) ?>
 
-  </nav>
+    </nav>
+   </div>
 
-  <div id="search-bar">
-
+   <div>
     <?php echo get_component('menu', 'browseMenu', array('sf_cache_key' => $sf_user->getCulture().$sf_user->getUserID())) ?>
-
+   </div>
+   <div>
     <?php echo get_component('search', 'box') ?>
-
+   </div>
   </div>
-
   <?php echo get_component_slot('header') ?>
-
+ </div>
+</div>
 </header>
 
 <?php if (sfConfig::get('app_toggleDescription')): ?>

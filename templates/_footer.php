@@ -16,14 +16,36 @@
  * along with Access to Memory (AtoM).  If not, see <http://www.gnu.org/licenses/>.
  */
 ?>
+<?php
+/*
+ * @ 2022.12.03
+ * Authors: Ricardo Pinho (ricardo.pinho@gisvm.com)
+ *
+ */
+?>
 
-<footer>
+<footer id="footer">
+
+ <div class="container">
+
+     <div id="DireitosDRCN">
+        <h5>@2022 Direção Regional de Cultura do Norte<br/>
+        Todos os direitos reservados</h5>
+      </div>
+
+      <div id="Logos-financiamento">
+        <?php $pluginpath = substr(__DIR__, strpos(__DIR__, "/plugins"));$pluginpath = rtrim($pluginpath, "templates"); ?>
+	  <?php echo image_tag($pluginpath.'images/logos-financiamento-footer.png', array('id' => 'atom-logo')) ?>
+      </div>
+
 
   <?php if (QubitAcl::check('userInterface', 'translate')): ?>
     <?php echo get_component('sfTranslatePlugin', 'translate') ?>
   <?php endif; ?>
 
   <?php echo get_component_slot('footer') ?>
+
+ </div>
 
   <div id="print-date">
     <?php echo __('Printed: %d%', array('%d%' => date('Y-m-d'))) ?>
