@@ -26,7 +26,7 @@
 class arDRCNPluginConfiguration extends sfPluginConfiguration
 {
   public static
-    $summary = 'Theme plugin made from scratch with some JavaScript magic. Cross-browser compatibility tested. Based in Twitter Bootstrap 2.0, 940px two-column layout, slightly responsive.',
+    $summary = 'Theme plugin,extension of arDominionPlugin and build for the Direção Regional da Cultura do Norte project.',      
     $version = '0.0.1';
 
   public function contextLoadFactories(sfEvent $event)
