@@ -29,7 +29,7 @@
  <div class="container">
 
      <div id="DireitosDRCN">
-        <h5>@2022 Direção Regional de Cultura do Norte<br/>
+        <h5>@ 2022 Direção Regional de Cultura do Norte<br/>
         Todos os direitos reservados</h5>
       </div>
 

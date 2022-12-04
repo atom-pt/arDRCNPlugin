@@ -22,6 +22,25 @@
  */
 
 /*
+ * Start main.less
+ *
+ */
+
+@font-face {
+  font-family: 'Barlow Regular';
+  src: url('../../vendor/fonts/barlow/Barlow-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow Semibold';
+  src: url('../../vendor/fonts/barlow/Barlow-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
  * Start variables.less
  *
  */
@@ -37,6 +56,8 @@
 
 @orange: @topBarBackgroundColor; //#f6ac00; // #ff8800;
 
+@blue: @green; //@buttonclipboardaddedcolor
+
 @searchfilterColor: @topBarBackgroundColor;
 
 @referencecodeColor: @textColor;
@@ -47,6 +68,11 @@
 @tabletheadthBColor: @topBarBackgroundColor;
 
 @objectBackgroundColor: @white;
+
+@buttonclipboardaddedcolor: @green; //@blue;
+
+//@wrapperbackground: @white;
+//@wrapperborderpx: 20px;
 
 // Forms
 // -------------------------
@@ -72,6 +98,20 @@
 /*
  * Start scaffolding.less
  */
+
+// div id="wrapper"
+
+#wrapper {
+  background-image: none; //url('../../images/separator.png');
+  //background-color: @wrapperbackground;
+  //border-left-width: @wrapperborderpx;
+  //border-right-width: @wrapperborderpx;
+  //border-style: solid;
+  //border-color: transparent;
+  //background-repeat: no-repeat;
+  //background-position: top center;
+}
+
 
 // Multiline headings
 
@@ -184,6 +224,29 @@
 .form-required {
   color: @requiredfieldColor;
 }
+/*
+ * Start buttons.less
+ *
+ */
+
+ /*
+  * Clipboard
+  */
+
+button.clipboard,
+button.clipboard-wide {
+  //border-radius: 5px;
+  //outline: none;
+  //color: @grayLight;
+
+  &:before {
+    //font-family: 'FontAwesome';
+    //font-size: 20px;
+    //color: @grayLight;
+    content: url(../../images/icons/icon-clipboard-add.png); //"\f0c6";
+    top: 0px;
+  }
+}
 
 /*
  * Start header.less
@@ -215,6 +278,7 @@ header #republica_drcn {
 
 #menu-bar {
   background-color: @objectBackgroundColor;
+  border-bottom: 1pt solid rgb(0, 0, 0);
 }
 
 #search-bar #browse-menu {
@@ -248,6 +312,49 @@ header #republica_drcn {
   // Icons
   > button:before {
     color: @black;
+  }
+}
+
+#language-menu {
+  > button:before {
+    content: url(../../images/icons/icon-language.png);
+    top: 8px;
+  }
+}
+
+#clipboard-menu {
+  > button:before {
+    content: url(../../images/icons/icon-clipboard.png);
+    top: 8px;
+  }
+}
+
+#quick-links-menu {
+  > button:before {
+    content: url(../../images/icons/icon-menu.png);
+    top: 4px;
+  }
+}
+
+#user-menu:hover {
+   background-color: @topBarBackgroundColor;
+}
+#user-menu {
+  > button:before {
+    content: url(../../images/icons/icon-user.png);
+    top: 0px;
+  }
+  button {
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: transparent;  
+  }
+}
+
+
+.top-dropdown-container .top-dropdown-header {
+  img {
+    width: 0px;
   }
 }
 

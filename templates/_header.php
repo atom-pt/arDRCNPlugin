@@ -56,19 +56,17 @@
   <div id="search-bar">
    <div style="float: right;">
     <nav>
+    <?php echo get_component('menu', 'quickLinksMenu') ?>
 
     <?php echo get_component('menu', 'userMenu') ?>
 
-    <?php echo get_component('menu', 'quickLinksMenu') ?>
+    <?php echo get_component('menu', 'clipboardMenu') ?>
 
     <?php if (sfConfig::get('app_toggleLanguageMenu')): ?>
       <?php echo get_component('menu', 'changeLanguageMenu') ?>
     <?php endif; ?>
 
-    <?php echo get_component('menu', 'clipboardMenu') ?>
-
     <?php echo get_component('menu', 'mainMenu', array('sf_cache_key' => $sf_user->getCulture().$sf_user->getUserID())) ?>
-
     </nav>
    </div>
 
