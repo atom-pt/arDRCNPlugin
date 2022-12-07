@@ -41,4 +41,4 @@ sudo service php7.2-fpm restart && sudo systemctl restart memcached
 
 http://atom/index.php/sfPluginAdminPlugin/themes
 
-And sellect the arDRCNPlugin ooption and press "Save" button
+And sellect the arDRCNPlugin option and press "Save" button
