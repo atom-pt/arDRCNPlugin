@@ -36,3 +36,9 @@ _Note: everytime you change or edit the php files in arDRCNPlugin, you must repe
 ```
 sudo service php7.2-fpm restart && sudo systemctl restart memcached
 ```
+
+## 2. Select rrDRCNPlugin theme into your AtoM Admin themes settings:
+
+http://atom/index.php/sfPluginAdminPlugin/themes
+
+And sellect the arDRCNPlugin ooption and press "Save" button
