@@ -42,3 +42,13 @@ sudo service php7.2-fpm restart && sudo systemctl restart memcached
 http://atom/index.php/sfPluginAdminPlugin/themes
 
 And sellect the arDRCNPlugin option and press "Save" button
+
+## 3. Change AtoM site favicon 
+
+Copy DRCN favicon.ico inside arDRCNPlugin images folder to AtoM install folder:
+
+```
+sudo cp /usr/share/nginx/atom/plugins/arDRCNPlugin/images/favicon.ico /usr/share/nginx/atom/
+```
+
+_Note: Refresh your browser cache: with CRTL+F5 key combination_
