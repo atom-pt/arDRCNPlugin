@@ -1,7 +1,7 @@
 # arDRCNPlugin
 __Customized theme for DRCN AtoM site based on arDominionPlugin__
 
-This theme was created for Access to Memory version 2.6.4. It is not granted to work on previous ou future versions.
+This theme was created for Access to Memory version 2.6.4. It is not granted to work on previous or future versions.
 
 ## Install instructions
 
