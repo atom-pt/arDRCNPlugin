@@ -1,6 +1,8 @@
 # arDRCNPlugin
 __Customized theme for DRCN AtoM site based on arDominionPlugin__
 
+<img src="images/image.png" width="50%">
+
 This theme was created for Access to Memory version 2.6.4. It is not granted to work on previous or future versions.
 
 ## Install instructions
@@ -27,7 +29,7 @@ sudo make -C /usr/share/nginx/atom/plugins/arDRCNPlugin
 ```
 * __Make all files inside arDRCNPlugin accessible to www-data user__
 ```
-sudo chown -R www-data:www-data arDRCNPlugin
+sudo chown -R www-data:www-data /usr/share/nginx/atom/plugins/arDRCNPlugin
 ```
 * __Reload the php files and clean the memory cache__
 
